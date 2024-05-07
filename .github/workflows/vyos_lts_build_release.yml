@@ -24,10 +24,10 @@ jobs:
       # Ref: https://docs.vyos.io/en/latest/contributing/build-vyos.html#build
       image: vyos/vyos-build:sagitta
       env:
-        TZ: Asia/Tokyo
+        TZ: Europe/Bucharest
       options: --privileged
     env:
-      TZ: Asia/Tokyo
+      TZ: Europe/Bucharest
     permissions:
       actions: read
       contents: write
@@ -53,7 +53,7 @@ jobs:
           
           ./build-vyos-image iso \
             --architecture "amd64" \
-            --build-by "9667078+naa0yama@users.noreply.github.com" \
+            --build-by "bogdan.dumitru" \
             --build-type "release" \
             --version "${{ inputs.version }}"
 
